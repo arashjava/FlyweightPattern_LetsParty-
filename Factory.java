@@ -20,7 +20,7 @@ public class Factory {
     private static final HashMap knife= new HashMap();
     private static final HashMap fork= new HashMap();
     private static final HashMap glass= new HashMap();
-    private static final HashMap drnk= new HashMap();
+
 
     public static Table getTable(String shape, String size){
         Table tab= (Table)table.get(shape);
@@ -43,7 +43,7 @@ public class Factory {
     }
 
     public static Knife getKnife(String shape){
-        Knife kn= (Knife)chair.get(shape);
+        Knife kn= (Knife)knife.get(shape);
         if (kn==null){   //  similar object doesn't exist
             kn= new Knife(shape);
             table.put(shape, kn);
@@ -52,7 +52,7 @@ public class Factory {
     }   
 
     public static Fork getFork(String size){
-        Fork fk= (Fork)chair.get(size);
+        Fork fk= (Fork)fork.get(size);
         if (fk==null){   //  similar object doesn't exist
             fk= new Fork(size);
             table.put(size, fk);
@@ -61,7 +61,7 @@ public class Factory {
     }   
 
    public static Spoon getSpoon(String size){
-        Spoon s= (Spoon)chair.get(size);
+        Spoon s= (Spoon)spoon.get(size);
         if (s==null){   //  similar object doesn't exist
             s= new Spoon(size);
             table.put(size, s);
@@ -70,7 +70,7 @@ public class Factory {
     }   
 
     public static Glass getGlass(String type){
-        Glass g= (Glass)chair.get(type);
+        Glass g= (Glass)glass.get(type);
         if (g==null){   //  similar object doesn't exist
             g= new Glass(type);
             table.put(type, g);
@@ -79,7 +79,7 @@ public class Factory {
     }   
 
     public static Dish getDish(String size){
-        Dish d= (Dish)chair.get(size);
+        Dish d= (Dish)dish.get(size);
         if (d==null){   //  similar object doesn't exist
             d= new Dish(size);
             table.put(size, d);
