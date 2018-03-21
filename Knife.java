@@ -18,7 +18,7 @@ public class Knife implements IPartyObjects{
     
     @Override
     public void getReady() {
-        System.out.println("Knife "+shape +" is ready.");
+        System.out.println("Knife "+shape );
     }
     
 }
